@@ -10,7 +10,7 @@
   import GenerateCertificate from "./pages/GenerateCertificate";
   import Admin from "./pages/Admin";
   import ViewCertificate from "./pages/ViewCertificate";
-
+//this is App.jsx
   function App() {
     return (
       <BrowserRouter>
