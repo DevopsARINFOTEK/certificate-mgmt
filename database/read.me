@@ -1,0 +1,23 @@
+arinfotek=# \dt
+              List of tables
+ Schema |     Name     | Type  |  Owner
+--------+--------------+-------+----------
+ public | certificates | table | postgres
+(1 row)
+
+
+arinfotek=# \d certificates
+                                           Table "public.certificates"
+     Column      |            Type             | Collation | Nullable |                 Default
+-----------------+-----------------------------+-----------+----------+------------------------------------------
+ id              | integer                     |           | not null | nextval('certificates_id_seq'::regclass)
+ certificate_ref | character varying(100)      |           |          |
+ name            | character varying(255)      |           |          |
+ gender          | character varying(20)       |           |          |
+ course_name     | character varying(255)      |           |          |
+ start_date      | date                        |           |          |
+ end_date        | date                        |           |          |
+ created_at      | timestamp without time zone |           |          | CURRENT_TIMESTAMP
+Indexes:
+    "certificates_pkey" PRIMARY KEY, btree (id)
+    "certificates_certificate_ref_key" UNIQUE CONSTRAINT, btree (certificate_ref)
